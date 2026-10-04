@@ -7,9 +7,9 @@ OWNER = "NanamiKite"
 OUT = Path("assets/generated")
 
 PROJECTS = [
-    ("DirectHCI", "DirectHCI", "Windows Raw HCI infrastructure", ["Rust","Windows","WinUSB","HCI"], "#58d8ff", "directhci-card.svg"),
-    ("FLOW-8-PC-Controller", "FLOW 8 PC Controller", "Native BLE desktop control", ["Rust","BLE/GATT","Protocol RE"], "#6ee7b7", "flow8-card.svg"),
-    ("CodeRecoil-for-Coyote-2.0", "CodeRecoil", "Editor events to physical feedback", ["JavaScript","VS Code","BLE"], "#f7b955", "coderecoil-card.svg"),
+    ("DirectHCI", "directhci", "DirectHCI", "Windows Raw HCI infrastructure", ["Rust","Windows","WinUSB","HCI"], "#249cd2", "#58d8ff"),
+    ("FLOW-8-PC-Controller", "flow8", "FLOW 8 PC Controller", "Native BLE desktop control", ["Rust","BLE/GATT","Protocol RE"], "#2ea06f", "#6ee7b7"),
+    ("CodeRecoil-for-Coyote-2.0", "coderecoil", "CodeRecoil", "Editor events to physical feedback", ["JavaScript","VS Code","BLE"], "#d29922", "#f7b955"),
 ]
 
 def fetch(repo):
@@ -32,38 +32,44 @@ def age(iso):
         return f"{days}d ago"
     return dt.strftime("%Y-%m-%d")
 
-def make(title, subtitle, tags, accent, data):
+def make(title, subtitle, tags, accent, theme, data):
+    if theme == "light":
+        bg, border, text, muted, pillbg = "#f6f8fa", "#d0d7de", "#24292f", "#57606a", "#ffffff"
+    else:
+        bg, border, text, muted, pillbg = "#0d1117", "#30363d", "#e6edf3", "#b1bac4", "#111820"
+
     x = 22
-    pills = []
+    pills=[]
     for tag in tags:
-        w = 20 + len(tag)*7.5
+        w = 18 + len(tag)*7.2
         pills.append(
-            f'<rect x="{x:.1f}" y="104" width="{w:.1f}" height="25" rx="12.5" fill="#111820" stroke="{accent}"/>'
-            f'<text x="{x+10:.1f}" y="121" fill="#e6edf3" font-size="12.2" '
+            f'<rect x="{x:.1f}" y="98" width="{w:.1f}" height="24" rx="12" fill="{pillbg}" stroke="{accent}"/>'
+            f'<text x="{x+9:.1f}" y="114" fill="{text}" font-size="11.8" '
             f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(tag)}</text>'
         )
-        x += w+6
+        x += w + 6
 
     meta = f'★ {data.get("stargazers_count",0)}   forks {data.get("forks_count",0)}   ● {data.get("language") or "Mixed"}   updated {age(data.get("pushed_at"))}'
 
     return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="390" height="150" viewBox="0 0 390 150">'
-        f'<rect width="390" height="150" rx="13" fill="#0d1117"/>'
-        f'<rect x="1" y="1" width="388" height="148" rx="12" fill="none" stroke="#30363d"/>'
-        f'<rect x="0" y="0" width="5" height="150" rx="2.5" fill="{accent}"/>'
-        f'<text x="22" y="34" fill="{accent}" font-size="21" font-weight="700" '
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="390" height="140" viewBox="0 0 390 140">'
+        f'<rect width="390" height="140" rx="13" fill="{bg}"/>'
+        f'<rect x="1" y="1" width="388" height="138" rx="12" fill="none" stroke="{border}"/>'
+        f'<rect x="0" y="0" width="5" height="140" rx="2.5" fill="{accent}"/>'
+        f'<text x="22" y="32" fill="{accent}" font-size="20" font-weight="700" '
         f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(title)}</text>'
-        f'<text x="22" y="62" fill="#e6edf3" font-size="14.5" '
+        f'<text x="22" y="59" fill="{text}" font-size="14" '
         f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(subtitle)}</text>'
-        f'<text x="22" y="87" fill="#b1bac4" font-size="11.8" '
+        f'<text x="22" y="82" fill="{muted}" font-size="11.5" '
         f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(meta)}</text>'
         + ''.join(pills)
         + '</svg>'
     )
 
 OUT.mkdir(parents=True, exist_ok=True)
-for repo,title,subtitle,tags,accent,fn in PROJECTS:
+for repo,key,title,subtitle,tags,accent_light,accent_dark in PROJECTS:
     data = fetch(repo)
-    (OUT/fn).write_text(make(title,subtitle,tags,accent,data), encoding="utf-8")
+    (OUT/f"{key}-light.svg").write_text(make(title,subtitle,tags,accent_light,"light",data), encoding="utf-8")
+    (OUT/f"{key}-dark.svg").write_text(make(title,subtitle,tags,accent_dark,"dark",data), encoding="utf-8")
 
 print("cards refreshed")

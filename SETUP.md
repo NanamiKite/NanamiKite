@@ -1,17 +1,18 @@
-# NanamiKite profile v7 — Anime RF Lab
+# NanamiKite profile v8 — unified theme
 
-Upload the contents of this folder to your public `NanamiKite/NanamiKite` profile repository.
+Upload this folder into the public `NanamiKite/NanamiKite` repository.
 
-Manual metadata refresh:
+This version uses:
+- a light GitHub-friendly banner for light mode
+- a dark banner for dark mode
+- matching light/dark project cards
+- native GitHub typography for the rest of the page
+- manual-only metadata refresh
+
+Manual refresh:
 1. Open the profile repository.
-2. Go to Actions.
-3. Open `Refresh profile cards`.
-4. Click `Run workflow`.
+2. Go to **Actions**.
+3. Open **Refresh profile cards**.
+4. Click **Run workflow**.
 
-Nothing is scheduled.
-
-v7 intentionally keeps custom visuals to:
-- one large anime/RF banner
-- three compact clickable project cards
-
-Everything below uses normal GitHub typography so the banner remains the visual focus.
+There is no scheduled trigger.
