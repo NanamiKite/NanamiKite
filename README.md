@@ -37,7 +37,6 @@
 </details>
 
 <details>
-<summary><b>How I build</b></summary>
 
 <div align="center">
 
