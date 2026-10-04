@@ -2,19 +2,12 @@
 
 <img src="./assets/banner.png" alt="NanamiKite cyber terminal banner" width="100%" />
 
-<br><br>
-
-<b>Building software for radios, devices, protocols and odd hardware.</b>
-
-<br>
-
+<b>Building software for radios, devices, protocols and odd hardware.</b><br>
 <sub>Most projects start with “I have this weird piece of hardware. Let's figure out how it works.”</sub>
 
 </div>
 
-<br>
-
-## `// FEATURED PROJECTS`
+## `> FEATURED PROJECTS`
 
 <p align="center">
 <a href="https://github.com/NanamiKite/DirectHCI"><img src="./assets/generated/directhci-card.svg" width="32%" alt="DirectHCI"></a>
@@ -22,18 +15,18 @@
 <a href="https://github.com/NanamiKite/CodeRecoil-for-Coyote-2.0"><img src="./assets/generated/coderecoil-card.svg" width="32%" alt="CodeRecoil"></a>
 </p>
 
-<img src="./assets/engineering-map.svg" width="100%" alt="Engineering signal path" />
+<img src="./assets/signal-path.svg" width="100%" alt="Signal path" />
 
 <br>
 
-<img src="./assets/skills.svg" width="100%" alt="Working with" />
+<img src="./assets/working-with.svg" width="100%" alt="Working with" />
 
-### `// SELECTED ENGINEERING`
+<br>
 
-`IDE tooling` · `plugin systems` · `hardware-related tooling` · `project automation` · `upstream/mainline contribution`
+<img src="./assets/engineering.svg" width="100%" alt="Engineering experience" />
 
 <details>
-<summary><code>// MORE PROJECTS</code></summary>
+<summary><code>&gt; MORE PROJECTS</code></summary>
 
 <br>
 
@@ -44,7 +37,7 @@
 </details>
 
 <details>
-<summary><code>// HOW I BUILD</code></summary>
+<summary><code>&gt; HOW I BUILD</code></summary>
 
 <br>
 
@@ -57,8 +50,6 @@ I'm gradually working backwards through the stack and learning the underlying pi
 <br>
 
 <div align="center">
-
-`~ RF ~~~~~ BLE ))) ===== USB ===== < HCI > ===== SOFTWARE`
 
 <sub>Building things because apparently leaving weird hardware alone is not an option.</sub>
 

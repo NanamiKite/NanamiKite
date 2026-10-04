@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="92" viewBox="0 0 1200 92">
+<rect width="1200" height="92" rx="16" fill="#0d1117"/>
+<rect x="1" y="1" width="1198" height="90" rx="15" fill="none" stroke="#30363d"/>
+<text x="28" y="31" fill="#58d8ff" font-size="19" font-weight="700" font-family="ui-monospace, SFMono-Regular, Consolas, monospace">&gt; ENGINEERING</text>
+<text x="28" y="64" fill="#e6edf3" font-size="14.5" font-family="ui-monospace, SFMono-Regular, Consolas, monospace">IDE tooling · plugin systems · hardware-related tooling · project automation · upstream/mainline contribution</text>
+</svg>

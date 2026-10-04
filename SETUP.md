@@ -1,15 +1,20 @@
-# NanamiKite profile v5
+# NanamiKite profile v6
 
-Copy the contents of this folder into the public `NanamiKite/NanamiKite` profile repository.
+Copy this folder into the public `NanamiKite/NanamiKite` profile repository.
 
-Manual card refresh:
-1. Open the repository.
-2. Go to Actions.
-3. Open `Refresh profile cards`.
-4. Click `Run workflow`.
+Manual metadata refresh:
 
-There is no schedule trigger.
+1. Open the profile repository.
+2. Go to **Actions**.
+3. Choose **Refresh profile cards**.
+4. Click **Run workflow**.
 
-Note: GitHub controls the maximum width of the profile page. A README cannot break out of the
-central profile column or remove the wide-screen margins. This v5 instead makes the usable
-README column denser and more horizontal.
+There is no scheduled trigger.
+
+Changes in v6:
+- larger project-card typography
+- brighter secondary text
+- removed READY / OPEN clutter
+- replaced `//` headings with terminal-style `>`
+- reduced whitespace under the banner
+- engineering experience is now a compact dark strip
