@@ -1,13 +1,14 @@
 <div align="center">
 
-<img src="./assets/banner.png" alt="NanamiKite cyber terminal banner" width="100%" />
+<img src="./assets/banner.png" alt="NanamiKite — Anime RF Lab" width="100%" />
 
-<b>Building software for radios, devices, protocols and odd hardware.</b><br>
-<sub>Most projects start with “I have this weird piece of hardware. Let's figure out how it works.”</sub>
+<br>
+
+<b>Building software around radios, protocols, devices, and hardware that probably deserved better software.</b>
 
 </div>
 
-## `> FEATURED PROJECTS`
+## Featured projects
 
 <p align="center">
 <a href="https://github.com/NanamiKite/DirectHCI"><img src="./assets/generated/directhci-card.svg" width="32%" alt="DirectHCI"></a>
@@ -15,18 +16,17 @@
 <a href="https://github.com/NanamiKite/CodeRecoil-for-Coyote-2.0"><img src="./assets/generated/coderecoil-card.svg" width="32%" alt="CodeRecoil"></a>
 </p>
 
-<img src="./assets/signal-path.svg" width="100%" alt="Signal path" />
+**Signal path**  
+`Hardware → USB / BLE / CAT / IQ → Protocol analysis → Systems → Desktop tools`
 
-<br>
+**Currently messing with**  
+`Bluetooth HCI` · `SDR` · `radio tooling` · `protocol analysis` · `strange hardware`
 
-<img src="./assets/working-with.svg" width="100%" alt="Working with" />
-
-<br>
-
-<img src="./assets/engineering.svg" width="100%" alt="Engineering experience" />
+**Selected engineering**  
+`IDE tooling` · `plugin systems` · `hardware integration` · `project automation` · `upstream contributions`
 
 <details>
-<summary><code>&gt; MORE PROJECTS</code></summary>
+<summary><b>More projects</b></summary>
 
 <br>
 
@@ -37,7 +37,7 @@
 </details>
 
 <details>
-<summary><code>&gt; HOW I BUILD</code></summary>
+<summary><b>How I build</b></summary>
 
 <br>
 

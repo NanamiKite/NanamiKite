@@ -1,20 +1,17 @@
-# NanamiKite profile v6
+# NanamiKite profile v7 — Anime RF Lab
 
-Copy this folder into the public `NanamiKite/NanamiKite` profile repository.
+Upload the contents of this folder to your public `NanamiKite/NanamiKite` profile repository.
 
 Manual metadata refresh:
-
 1. Open the profile repository.
-2. Go to **Actions**.
-3. Choose **Refresh profile cards**.
-4. Click **Run workflow**.
+2. Go to Actions.
+3. Open `Refresh profile cards`.
+4. Click `Run workflow`.
 
-There is no scheduled trigger.
+Nothing is scheduled.
 
-Changes in v6:
-- larger project-card typography
-- brighter secondary text
-- removed READY / OPEN clutter
-- replaced `//` headings with terminal-style `>`
-- reduced whitespace under the banner
-- engineering experience is now a compact dark strip
+v7 intentionally keeps custom visuals to:
+- one large anime/RF banner
+- three compact clickable project cards
+
+Everything below uses normal GitHub typography so the banner remains the visual focus.

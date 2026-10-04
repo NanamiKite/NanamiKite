@@ -33,29 +33,29 @@ def age(iso):
     return dt.strftime("%Y-%m-%d")
 
 def make(title, subtitle, tags, accent, data):
-    x = 24
+    x = 22
     pills = []
     for tag in tags:
-        w = 22 + len(tag)*8.0
+        w = 20 + len(tag)*7.5
         pills.append(
-            f'<rect x="{x:.1f}" y="124" width="{w:.1f}" height="26" rx="13" fill="#101820" stroke="{accent}"/>'
-            f'<text x="{x+11:.1f}" y="142" fill="#e6edf3" font-size="13" '
+            f'<rect x="{x:.1f}" y="104" width="{w:.1f}" height="25" rx="12.5" fill="#111820" stroke="{accent}"/>'
+            f'<text x="{x+10:.1f}" y="121" fill="#e6edf3" font-size="12.2" '
             f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(tag)}</text>'
         )
-        x += w + 7
+        x += w+6
 
     meta = f'★ {data.get("stargazers_count",0)}   forks {data.get("forks_count",0)}   ● {data.get("language") or "Mixed"}   updated {age(data.get("pushed_at"))}'
 
     return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="390" height="182" viewBox="0 0 390 182">'
-        f'<rect width="390" height="182" rx="14" fill="#0d1117"/>'
-        f'<rect x="1" y="1" width="388" height="180" rx="13" fill="none" stroke="#30363d"/>'
-        f'<rect x="0" y="0" width="6" height="182" rx="3" fill="{accent}"/>'
-        f'<text x="24" y="38" fill="{accent}" font-size="23" font-weight="700" '
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="390" height="150" viewBox="0 0 390 150">'
+        f'<rect width="390" height="150" rx="13" fill="#0d1117"/>'
+        f'<rect x="1" y="1" width="388" height="148" rx="12" fill="none" stroke="#30363d"/>'
+        f'<rect x="0" y="0" width="5" height="150" rx="2.5" fill="{accent}"/>'
+        f'<text x="22" y="34" fill="{accent}" font-size="21" font-weight="700" '
         f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(title)}</text>'
-        f'<text x="24" y="72" fill="#e6edf3" font-size="15.5" '
+        f'<text x="22" y="62" fill="#e6edf3" font-size="14.5" '
         f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(subtitle)}</text>'
-        f'<text x="24" y="101" fill="#b1bac4" font-size="13" '
+        f'<text x="22" y="87" fill="#b1bac4" font-size="11.8" '
         f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(meta)}</text>'
         + ''.join(pills)
         + '</svg>'
