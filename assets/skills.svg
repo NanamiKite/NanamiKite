@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110">
+<rect width="1200" height="110" rx="16" fill="#0d1117"/>
+<rect x="1" y="1" width="1198" height="108" rx="15" fill="none" stroke="#30363d"/>
+<g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="13.5">
+<text x="26" y="30" fill="#58d8ff" font-size="17" font-weight="700">&gt; WORKING WITH</text>
+<text x="26" y="59" fill="#6ee7b7">SYSTEMS</text><text x="118" y="59" fill="#e6edf3">Windows APIs · WinUSB · Bluetooth HCI · BLE/GATT · USB</text>
+<text x="26" y="84" fill="#6ee7b7">RADIO</text><text x="118" y="84" fill="#e6edf3">SDR · CAT · IQ · protocol analysis</text>
+<text x="640" y="59" fill="#f7b955">LANGUAGES</text><text x="746" y="59" fill="#e6edf3">Rust · Python · JavaScript · Java</text>
+<text x="640" y="84" fill="#f7b955">LEARNING</text><text x="746" y="84" fill="#e6edf3">OS · networking · DSP · deeper Rust</text>
+</g>
+</svg>

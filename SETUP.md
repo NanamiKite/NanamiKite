@@ -1,10 +1,15 @@
-# Setup
+# NanamiKite profile v5
 
-1. Put these files in the public profile repository `NanamiKite/NanamiKite`.
-2. Push them to the default branch.
-3. Open **Actions** → **Update profile cards** → **Run workflow**.
-4. The workflow fetches current public metadata for the three featured repositories, regenerates `assets/generated/*.svg`, commits those SVGs, and pushes them back.
+Copy the contents of this folder into the public `NanamiKite/NanamiKite` profile repository.
 
-There is deliberately **no scheduled trigger**. Nothing updates until you manually press **Run workflow**.
+Manual card refresh:
+1. Open the repository.
+2. Go to Actions.
+3. Open `Refresh profile cards`.
+4. Click `Run workflow`.
 
-If the push is blocked, check **Settings → Actions → General → Workflow permissions** and allow the workflow to write repository contents. The workflow itself requests only `contents: write`.
+There is no schedule trigger.
+
+Note: GitHub controls the maximum width of the profile page. A README cannot break out of the
+central profile column or remove the wide-screen margins. This v5 instead makes the usable
+README column denser and more horizontal.
