@@ -39,16 +39,6 @@
 <details>
 <summary><b>How I build</b></summary>
 
-<br>
-
-I use AI coding agents extensively as part of my development workflow. I focus on problem definition, architecture, protocol/device analysis, integration, debugging, real-hardware validation, and reviewing how the resulting system actually behaves.
-
-I'm gradually working backwards through the stack and learning the underlying pieces more deeply instead of treating generated code as a black box.
-
-</details>
-
-<br>
-
 <div align="center">
 
 <sub>Building things because apparently leaving weird hardware alone is not an option.</sub>
