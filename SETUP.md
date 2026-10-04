@@ -8,3 +8,9 @@ Changes from v8:
 
 Manual refresh is unchanged:
 Actions → Refresh profile cards → Run workflow
+
+
+v10 changes:
+- removed the public `How I build` section
+- removed public AI/vibe-coding framing
+- profile now focuses on projects, technical interests, and engineering evidence
