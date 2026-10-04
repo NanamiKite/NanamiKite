@@ -1,18 +1,10 @@
-# NanamiKite profile v8 — unified theme
+# NanamiKite profile v9 — larger type
 
-Upload this folder into the public `NanamiKite/NanamiKite` repository.
+Changes from v8:
+- larger project titles
+- larger project descriptions
+- larger metadata and tags
+- slightly larger native section headings
 
-This version uses:
-- a light GitHub-friendly banner for light mode
-- a dark banner for dark mode
-- matching light/dark project cards
-- native GitHub typography for the rest of the page
-- manual-only metadata refresh
-
-Manual refresh:
-1. Open the profile repository.
-2. Go to **Actions**.
-3. Open **Refresh profile cards**.
-4. Click **Run workflow**.
-
-There is no scheduled trigger.
+Manual refresh is unchanged:
+Actions → Refresh profile cards → Run workflow

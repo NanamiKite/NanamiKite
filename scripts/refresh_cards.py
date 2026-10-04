@@ -8,7 +8,7 @@ OUT = Path("assets/generated")
 
 PROJECTS = [
     ("DirectHCI", "directhci", "DirectHCI", "Windows Raw HCI infrastructure", ["Rust","Windows","WinUSB","HCI"], "#249cd2", "#58d8ff"),
-    ("FLOW-8-PC-Controller", "flow8", "FLOW 8 PC Controller", "Native BLE desktop control", ["Rust","BLE/GATT","Protocol RE"], "#2ea06f", "#6ee7b7"),
+    ("FLOW-8-PC-Controller", "flow8", "FLOW 8 Controller", "Native BLE desktop control", ["Rust","BLE/GATT","Protocol RE"], "#2ea06f", "#6ee7b7"),
     ("CodeRecoil-for-Coyote-2.0", "coderecoil", "CodeRecoil", "Editor events to physical feedback", ["JavaScript","VS Code","BLE"], "#d29922", "#f7b955"),
 ]
 
@@ -41,26 +41,26 @@ def make(title, subtitle, tags, accent, theme, data):
     x = 22
     pills=[]
     for tag in tags:
-        w = 18 + len(tag)*7.2
+        w = 22 + len(tag)*8.2
         pills.append(
-            f'<rect x="{x:.1f}" y="98" width="{w:.1f}" height="24" rx="12" fill="{pillbg}" stroke="{accent}"/>'
-            f'<text x="{x+9:.1f}" y="114" fill="{text}" font-size="11.8" '
+            f'<rect x="{x:.1f}" y="118" width="{w:.1f}" height="28" rx="14" fill="{pillbg}" stroke="{accent}"/>'
+            f'<text x="{x+11:.1f}" y="137" fill="{text}" font-size="13.2" '
             f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(tag)}</text>'
         )
-        x += w + 6
+        x += w + 7
 
     meta = f'★ {data.get("stargazers_count",0)}   forks {data.get("forks_count",0)}   ● {data.get("language") or "Mixed"}   updated {age(data.get("pushed_at"))}'
 
     return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="390" height="140" viewBox="0 0 390 140">'
-        f'<rect width="390" height="140" rx="13" fill="{bg}"/>'
-        f'<rect x="1" y="1" width="388" height="138" rx="12" fill="none" stroke="{border}"/>'
-        f'<rect x="0" y="0" width="5" height="140" rx="2.5" fill="{accent}"/>'
-        f'<text x="22" y="32" fill="{accent}" font-size="20" font-weight="700" '
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="390" height="164" viewBox="0 0 390 164">'
+        f'<rect width="390" height="164" rx="13" fill="{bg}"/>'
+        f'<rect x="1" y="1" width="388" height="162" rx="12" fill="none" stroke="{border}"/>'
+        f'<rect x="0" y="0" width="5" height="164" rx="2.5" fill="{accent}"/>'
+        f'<text x="22" y="36" fill="{accent}" font-size="24" font-weight="700" '
         f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(title)}</text>'
-        f'<text x="22" y="59" fill="{text}" font-size="14" '
+        f'<text x="22" y="68" fill="{text}" font-size="16" '
         f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(subtitle)}</text>'
-        f'<text x="22" y="82" fill="{muted}" font-size="11.5" '
+        f'<text x="22" y="96" fill="{muted}" font-size="12.8" '
         f'font-family="ui-monospace, SFMono-Regular, Consolas, monospace">{html.escape(meta)}</text>'
         + ''.join(pills)
         + '</svg>'
