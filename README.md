@@ -47,6 +47,8 @@
 ### Selected engineering
 IDE tooling · plugin systems · hardware integration · project automation · upstream contributions
 
+### 妙妙工具：https://github.com/NanamiKite/nanami-toolbox
+
 <details>
 <summary><b>More projects</b></summary>
 
